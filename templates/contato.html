@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio de Pedro Henrique, desenvolvedor web, projetos, habilidades e contato.">
+  <title>Portfólio - Contato</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Pedro Henrique Lopes Teodoro</div>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/sobre">sobre</a></li>
+        <li><a href="/projetos">projetos</a></li>
+        <li><a href="/habilidades">habilidades</a></li>
+        <li><a href="/contato" class="active">contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Contato -->
+  <section class="contato">
+    <h2>Contato</h2>
+    <p>Quer trabalhar comigo? Mande uma mensagem!</p>
+
+    <!-- Informações de Contato -->
+    <div class="contato-info">
+      <div class="info-item"><i class="fas fa-envelope" aria-hidden="true"></i> pedrohenriqueprogramador1@gmail.com</div>
+      <div class="info-item"><i class="fas fa-phone" aria-hidden="true"></i> (27) 99267-2255</div>
+      <div class="info-item"><i class="fab fa-linkedin" aria-hidden="true"></i> 
+        <a href="https://www.linkedin.com/in/pedeo-henrique-a21b072a9" target="_blank" rel="noopener noreferrer">
+          linkedin.com/in/pedeo-henrique
+        </a>
+      </div>
+      <div class="info-item"><i class="fab fa-github" aria-hidden="true"></i> 
+        <a href="https://github.com/Teodoro027" target="_blank" rel="noopener noreferrer">
+          github.com/Teodoro027
+        </a>
+      </div>
+    </div>
+
+    <!-- Formulário -->
+    <form id="contato-form" class="contato-form">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Seu email" required />
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+
+      <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Script para enviar mensagem via WhatsApp -->
+  <script>
+    const form = document.getElementById('contato-form');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+
+      if (!nome || !email || !mensagem) return;
+
+      const numeroWhats = '552799922672255'; // número internacional sem '+'
+      const texto = `Olá, meu nome é ${nome}. Meu e-mail é ${email}. Mensagem: ${mensagem}`;
+      const urlTexto = encodeURIComponent(texto);
+
+      window.open(`https://wa.me/${numeroWhats}?text=${urlTexto}`, '_blank');
+    });
+  </script>
+</body>
+</html>
