@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Projetos | Pedro Henrique Lopes Teodoro</title>
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilo CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon" />
+
+  <!-- Meta tags SEO -->
+  <meta name="description" content="Portfólio de Pedro Henrique Lopes Teodoro. Veja projetos de Front-End e desenvolvimento de jogos." />
+  <meta name="author" content="Pedro Henrique Lopes Teodoro" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo" aria-label="Nome do site ou portfólio">Pedro Henrique Lopes Teodoro</div>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="/" aria-current="page">Home</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+        <li><a href="/projetos" class="active">Projetos</a></li>
+        <li><a href="/habilidades">Habilidades</a></li>
+        <li><a href="/contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Projetos -->
+  <main>
+    <section class="projetos" aria-labelledby="projetos-title">
+      <h2 id="projetos-title">Meus Projetos</h2>
+      <p class="info-msg">Alguns projetos desenvolvidos em equipe e individualmente, com foco em Front-End e desenvolvimento de jogos.</p>
+
+      <div class="grid-projetos">
+
+        <!-- Projeto 1: Loja de Tênis -->
+        <article class="projeto-card" tabindex="0" aria-label="Projeto Loja de Tênis Online">
+          <h3>Loja de Tênis Online</h3>
+          <p>Projeto de e-commerce desenvolvido em equipe. Fui responsável pelas páginas de produtos e sistema de carrinho.</p>
+          
+          <!-- Imagem do projeto -->
+          <img src="{{ url_for('static', filename='imagem/loja-de-tenis.png') }}" 
+               alt="Imagem da Loja de Tênis Online" 
+               style="border-radius: 12px; margin-top: 15px; width: 100%; object-fit: cover;" />
+          
+          <a href="https://github.com/Teodoro027/loja_tenis.git" 
+             class="btn" target="_blank" rel="noopener noreferrer" 
+             aria-label="Ver código do projeto Loja de Tênis no GitHub">
+            Ver Código
+          </a>
+        </article>
+
+        <!-- Projeto 2: Jogo Unity com vídeo -->
+        <article class="projeto-card" tabindex="0" aria-label="Projeto Jogo 2D Unity">
+          <h3>Jogo 3D (Unity)</h3>
+          <p>Jogo criado em grupo usando Unity. Contribuí no design, programação de interações e funcionalidades básicas.</p>
+         <img src="{{ url_for('static', filename='imagem/jogo-unity.png') }}" 
+               alt="Imagem da Loja de Tênis Online" 
+               style="border-radius: 12px; margin-top: 15px; width: 100%; object-fit: cover;" />
+        </article>
+
+      </div>
+
+      <!-- Botão principal da seção -->
+      <div class="btn-container" style="text-align: center; margin-top: 40px;">
+        <a href="/habilidades" class="btn" aria-label="Ver minhas habilidades">
+          Ver minhas habilidades
+        </a>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
