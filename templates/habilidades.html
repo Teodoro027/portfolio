@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio de Pedro Henrique, desenvolvedor web, habilidades e tecnologias.">
+  <title>Portfólio - Habilidades</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Pedro Henrique Lopes Teodoro</div>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/sobre">sobre</a></li>
+        <li><a href="/projetos">projetos</a></li>
+        <li><a href="/habilidades" class="active">habilidades</a></li>
+        <li><a href="/contato">contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Habilidades -->
+  <section class="habilidades">
+    <h2>Minhas Habilidades</h2>
+    <p>Confira minhas competências técnicas e níveis de experiência.</p>
+
+    <div class="grid-habilidades">
+
+      <div class="skill-card" style="animation: fadeInUp 0.5s ease forwards;">
+        <h3>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo" class="logo-linguagem" />
+          HTML5
+        </h3>
+        <p>Boa base em marcação semântica e estruturação de páginas responsivas.</p>
+        <span class="nivel intermedio">Nível: Intermediário</span>
+      </div>
+
+      <div class="skill-card" style="animation: fadeInUp 0.6s ease forwards;">
+        <h3>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo" class="logo-linguagem" />
+          CSS3
+        </h3>
+        <p>Conhecimento em layouts modernos usando Flexbox, Grid e animações.</p>
+        <span class="nivel intermedio">Nível: Intermediário</span>
+      </div>
+
+      <div class="skill-card" style="animation: fadeInUp 0.7s ease forwards;">
+        <h3>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="logo-linguagem" />
+          JavaScript
+        </h3>
+        <p>Lógica de programação, manipulação do DOM e interatividade básica.</p>
+        <span class="nivel iniciante">Nível: Iniciante</span>
+      </div>
+
+      <div class="skill-card" style="animation: fadeInUp 0.8s ease forwards;">
+        <h3>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Logo" class="logo-linguagem" />
+          Node.js
+        </h3>
+        <p>Uso básico de Express, criação de rotas e APIs simples.</p>
+        <span class="nivel iniciante">Nível: Iniciante</span>
+      </div>
+
+      <div class="skill-card" style="animation: fadeInUp 0.9s ease forwards;">
+        <h3>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo" class="logo-linguagem" />
+          Python
+        </h3>
+        <p>Conhecimento inicial em sintaxe e automações básicas.</p>
+        <span class="nivel iniciante">Nível: Iniciante</span>
+      </div>
+
+      <div class="skill-card" style="animation: fadeInUp 1s ease forwards;">
+        <h3>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity Logo" class="logo-linguagem" />
+          Unity (C#)
+        </h3>
+        <p>Explorando o desenvolvimento de jogos e cenas com Unity Engine.</p>
+        <span class="nivel aprendizado">Nível: Em Aprendizado</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Animações via CSS -->
+  <style>
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</body>
+</html>
+ 
